@@ -37,8 +37,7 @@ Perl and shell are used to run the scripts. The following softwares are also req
 Usage: sh NascentCov.sh -a SampleID -i ReadsWithLargeInsertion -f HighQuality Forward Read -r HighQuality Reverse Read -b WorkingDirectory -o OutputFolder -p SoftwareDirectory [Options]
 
 
-
-
+```
 
 For more detail information, please feel free to contact: xin.wang@childrens.harvard.edu
 
