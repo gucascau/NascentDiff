@@ -7,4 +7,6 @@ NascentDiff is a pipeline to conduct a differential expression analysis in genom
 3. Detecting the differential expression of various features of nascent RNA, including the 18S, 28S rRNA, non-coding RNA, protein coding RNA.
 4. Meta RNAs Profiling for normalized EU-seq reads.
 
+If you have difficulties using NascentDiff, pelase contact us xin.wang@childrens.havard.edu
 
+## Install NascentDiff
