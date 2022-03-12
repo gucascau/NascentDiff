@@ -1,6 +1,6 @@
 
 # NascentDiff
-To gain a better understanding of transcriptional inhibition after IR, we sought to identify the nascent RNAs whose transcription was being inhibited, and profile the globally nascent RNA changes preference after IR. We isolated EU labelled nascent total RNA transcripts 30 minutes after IR and prior to IR from two independent experiments and sequenced the EU-RNA with included ERCC spike-in controls for normalization. 
+The genome encodes information begins with regulated transcription of genomic DNA into RNA. These transcription can measuring stable RNAs, or directly by measuring nascent RNAs. The immediate regulatory changes in response to developmental, environmental, disease, and metabolic signal can be easily tacked by the nascent RNA changes. 
 
 Using ERCC read distribution, we developed a novel normalization method, NascentDiff, to quantitively trace nascent transcription genome-wide at nucleotide-resolution and detect the differential expression of nascent RNA 
 
