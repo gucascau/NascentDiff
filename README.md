@@ -10,8 +10,27 @@ NascentDiff is a pipeline to conduct a differential expression analysis in genom
 # Feature 
 	 -- Quantitively comparing nascent transcription genome-wide changes at nucleotide-resolution for 45 pre-ribosomal RNA and whole genome under different condition.
 	 -- Measuring the global nascent RNA changes, including total nascent RNA, total rRNA, total protein coding and total long non-coding RNA.
-	 -- Detecting the differential expression of various features of nascent RNA, including the 18S, 28S rRNA, non-coding RNA, protein coding RNA.
-   -- Meta RNAs Profiling for normalized EU-seq reads.
+	 -- Detecting the differential expression of various features of nascent RNA, including the 18S, 28S rRNA, non-coding RNA, protein coding RNA
+	 -- Meta RNAs Profiling for normalized EU-seq reads.
+   
+
+# Dependencies
+
+Perl and shell are used to run the scripts. The following softwares are also required:
+
+. trim_galore
+. htseq-count 
+. bowtie2
+. samtools
+. bedtools 
+. tophat
+
+# Install
+
+```
+    cd ~
+    git clone https://github.com/gucascau/NascentDiff.git
+```   
 # Usage
 ```
 ## measure the read counts and genome-wide depth
