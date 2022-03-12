@@ -36,6 +36,26 @@ Perl and shell are used to run the scripts. The following softwares are also req
 ## measure the read counts and genome-wide depth
 Usage: sh NascentCov.sh -a SampleID -i ReadsWithLargeInsertion -f HighQuality Forward Read -r HighQuality Reverse Read -b WorkingDirectory -o OutputFolder -p SoftwareDirectory [Options]
 
+## calulate the norm factor of ERCC, Please generate the read count of ERCC table for input
+NormFactor.R
+
+## Normalize the genome-wide distribution
+
+α logYERCC counts – β
+
+### example 
+perl -ne '{chomp; my ($chr,$start,$end,$cov)=split/\t/,$_; my $tranf=(log($cov+1)/log(10))*1.0025-0.1238; my $FReadCov=int(10**($tranf))-1; print "$chr\t$start\t$end\t$FReadCov\n"}' ZC6_CKDL210007117-1a-G
+B01-AK7214_H5CWJDSX2_L4.rDNA.cov >ZC6_CKDL210007117-1a-GB01-AK7214_H5CWJDSX2_L4.rDNA.norm.cov
+### transfer into bigwig
+bedGraphToBigWig ZC6_CKDL210007117-1a-GB01-AK7214_H5CWJDSX2_L4.rDNA.norm.cov mm10.rDNA.sizes ZC6_CKDL210007117-1a-GB01-AK7214_H5CWJDSX2_L4.rDNA.norm.bw
+
+
+## Normalize the read counts of each features
+
+
+## Run the EdgR to detect the differential expressed nascent RNA, please run edgR for DEG without. The script is without any normalition
+
+EdgR.R
 
 ```
 
