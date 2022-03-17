@@ -61,6 +61,10 @@ EdgR.R
 
 For more detail information, please feel free to contact: xin.wang@childrens.harvard.edu
 
+Copyright (c) 2022 Dr. Kaifu Chen lab
+
+Current version v1.0
+
 
 
 
