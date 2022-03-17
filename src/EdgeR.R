@@ -1,3 +1,6 @@
+#Author:Xin Wang 
+#email: xin.wang@childrens.harvard.edu
+#PI: Kaifu Chen
 
 ### Meanwhile, when we used the EdgeR, no more further normalization was used to detect the differential expression genes.
 library(edgeR)
@@ -71,7 +74,7 @@ ggplot(toplot, aes(Dim1, Dim2,col=c(rep("black",4), rep("red",4))))+ geom_point(
 #plotMDS(logCPM_Batch)
 #?plotMDS
 
-#######预处理
+####### Pre-treatment
 
 
 
