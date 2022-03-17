@@ -291,13 +291,14 @@ hg19=/project/RC_Cardio-Chen-e2/ch220812/Project/GlobalShutDownZulong/Hg19Used/S
 #bowtie2-build Human.rDNA.fa HrDNA
 rDNAG=/project/RC_Cardio-Chen-e2/ch220812/Project/GlobalShutDownZulong/HumrDNA/HrDNA
 
-#ODNAG=/lab-share/Cardio-Chen-e2/Public/xwang/tmhxxw9/tmhxxw9/project/Transcriptional_ShutDown/Database/MouseRdna/PossibleAbundantSequence
+### the information of rDNA and other chromosomal sequences
+ODNAG=/lab-share/Cardio-Chen-e2/Public/xwang/tmhxxw9/tmhxxw9/project/Transcriptional_ShutDown/Database/MouseRdna/PossibleAbundantSequence
 
 
-# ## the inforamtion of ERCC phix genome and annoation information
-#
-# ERCCgtf=/lab-share/Cardio-Chen-e2/Public/xwang/tmhxxw9/tmhxxw9/project/Transcriptional_ShutDown/Database/ERCC92/ERCC92.gtf
-# ERCCGen=/lab-share/Cardio-Chen-e2/Public/xwang/tmhxxw9/tmhxxw9/project/Transcriptional_ShutDown/Database/ERCC92/ERCC92
+## the inforamtion of ERCC phix genome and annoation information
+
+ERCCgtf=/lab-share/Cardio-Chen-e2/Public/xwang/tmhxxw9/tmhxxw9/project/Transcriptional_ShutDown/Database/ERCC92/ERCC92.gtf
+ERCCGen=/lab-share/Cardio-Chen-e2/Public/xwang/tmhxxw9/tmhxxw9/project/Transcriptional_ShutDown/Database/ERCC92/ERCC92
 # #mm10_chr=/home/tmhyxl54/archive/pipeline/atac_seq/Resource/Genome/mm10/mm10.chrom.sizes
 #hg19_chr=/home/tmhyxl54/archive/pipeline/atac_seq/Resource/Genome/hg19/hg19_chromosome.size
 #exon=$ref/hg19.refGene.exon.anno.consExons.sort.gtf
@@ -312,7 +313,7 @@ rDNAG=/project/RC_Cardio-Chen-e2/ch220812/Project/GlobalShutDownZulong/HumrDNA/H
 read1=.1.fastq
 
 cut1=.1_trimmed.fq
-#cut2=_2_val_2.fq
+cut2=_2_val_2.fq
 
 
 date
