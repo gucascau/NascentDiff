@@ -30,7 +30,7 @@ helpFunction()
 	echo -e "\t-b The working directory, where the raw read stored and we measure the read counts of various features"
 	echo -e "\t-f forward reads (Example: SampleID_L001_R1_001.fastq)"
 	echo -e "\t-r reverse reads (Example: SampleID_L001_R2_001.fastq)"
-	echo -e "\t-p Software installed Path, Attation: This required to install DSBins, BLAST, PEAR, Bedtools in the same folder (Default:"")" 
+	echo -e "\t-p Software installed Path, Attation: This required to install trim_galore, bowtie2, tophat, Bedtools, samtools in the same folder or can run authomatically (Default:"")" 
 	echo -e "\t-gs Genome sequence with ERCC sequences"
 	echo -e "\t-ga Genome annotation with ERCC annotation"
 	echo -e "\t-gr rDNA genomic sequences"
