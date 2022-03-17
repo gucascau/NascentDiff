@@ -36,7 +36,8 @@ Perl and shell are used to run the scripts. The following softwares are also req
 ## measure the read counts and genome-wide depth
 Usage: sh NascentCov.sh -a SampleID -i ReadsWithLargeInsertion -f HighQuality Forward Read -r HighQuality Reverse Read -b WorkingDirectory -o OutputFolder -p SoftwareDirectory [Options]
 
-## calulate the norm factor of ERCC, Please generate the read count of ERCC table for input
+## calulate the norm factor of ERCC using the ERCC reads counts across samples. 
+## generate the slope and interset
 NormFactor.R
 
 ## Normalize the genome-wide distribution
