@@ -19,10 +19,15 @@ NascentDiff is a pipeline to conduct a differential expression analysis in genom
 Perl and shell are used to run the scripts. The following softwares are also required:
 
 . trim_galore
+
 . htseq-count 
+
 . bowtie2
+
 . samtools
+
 . bedtools 
+
 . tophat
 
 # Install
