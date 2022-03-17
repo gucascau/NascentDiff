@@ -41,13 +41,12 @@ NormFactor.R
 
 ## Normalize the genome-wide distribution
 
-α logYERCC counts – β
+α logYERCC counts + β
 
 ### example 
-perl -ne '{chomp; my ($chr,$start,$end,$cov)=split/\t/,$_; my $tranf=(log($cov+1)/log(10))*1.0025-0.1238; my $FReadCov=int(10**($tranf))-1; print "$chr\t$start\t$end\t$FReadCov\n"}' ZC6_CKDL210007117-1a-G
-B01-AK7214_H5CWJDSX2_L4.rDNA.cov >ZC6_CKDL210007117-1a-GB01-AK7214_H5CWJDSX2_L4.rDNA.norm.cov
+perl NormalizationBasedOnERCC.pl -i Genome-wide.cov -a α -b β -c 1 -o Genome-wide.norm.cov 
 ### transfer into bigwig
-bedGraphToBigWig ZC6_CKDL210007117-1a-GB01-AK7214_H5CWJDSX2_L4.rDNA.norm.cov mm10.rDNA.sizes ZC6_CKDL210007117-1a-GB01-AK7214_H5CWJDSX2_L4.rDNA.norm.bw
+bedGraphToBigWig Genome-wide.norm.cov mm10.rDNA.sizes Genome-wide.norm.bw
 
 
 ## Normalize the read counts of each features
