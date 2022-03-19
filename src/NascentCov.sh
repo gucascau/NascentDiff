@@ -467,14 +467,18 @@ echo " 		Attention you must load the ucsc"
 module load ucsc
 
 echo " 		Use bedtools to measure the genomic coverage of rDNA"
-bedtools genomecov -ibam  $out/${id}.rDNA.sort.bam -bg >$out/${id}.rDNA.cov
+
+### The most important parameter is the -b. Since we provide the bam file but not focused on the specific bed files, we printed all the positions that contain reads.
+### The parameter is adjustable, if we would like to focus on specific annoated regions. The input paremeter would be -split and a BED file to focused on the reads coverage for these regions.
+
+bedtools genomecov -ibam  $out/${id}.rDNA.sort.bam -bga  -split >$out/${id}.rDNA.cov
 echo " 		Use bedtools to measure the genomic coverage of all other regions"
 
 
 samtools sort  $out/${id}.norDNA/${id}.srt.filtered.bam -o  $out/${id}.norDNA/${id}.srt.filtered.sorted.bam
 samtools index $out/${id}.norDNA/${id}.srt.filtered.sorted.bam
 
-bedtools genomecov -ibam  $out/${id}.norDNA/${id}.srt.filtered.sorted.bam -bg >$out/${id}.genomic.cov
+bedtools genomecov -ibam  $out/${id}.norDNA/${id}.srt.filtered.sorted.bam -bga -split >$out/${id}.genomic.cov
 
 
 echo "Congratulation, you have already finished the task!"
