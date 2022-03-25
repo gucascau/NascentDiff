@@ -1,6 +1,6 @@
 
 # NascentDiff
-The genome encodes information begins with regulated transcription of genomic DNA into RNA. These transcription can measuring stable RNAs, or directly by measuring nascent RNAs. The immediate regulatory changes in response to developmental, environmental, disease, and metabolic signal can be easily tacked by the nascent RNA changes. 
+The genome encodes information begins with regulated transcription of genomic DNA into RNA. These transcription can measure stable RNAs, or directly by measuring nascent RNAs. The immediate regulatory changes in response to developmental, environmental, disease, and metabolic signal can be easily tacked by the nascent RNA changes. 
 
 Using ERCC read distribution, we developed a novel normalization method, NascentDiff, to quantitively trace nascent transcription genome-wide at nucleotide-resolution and detect the differential expression of nascent RNA 
 
