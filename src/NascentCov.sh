@@ -25,7 +25,8 @@ helpFunction()
 	echo -e "\t -- Genome-Wide depth: Sorting the bam files from rDNA and other annotated features, keep the unique mapping reads, transfering into coverage files  "
 	echo ""
 	echo ""
-
+	
+	#### need to update accordingly ####
 	
 	echo -e "\t-h help"
 	
@@ -45,56 +46,6 @@ nproc=15
 # default software path 
 softwarepath=''
 
-# Mata information
-# default whole MAT length
-Matasize=90
-# default Mata chromosome 
-Matachr="chrIII"
-# default Mata start site
-Matastart=294300
-# default Mata end site
-Mataend=294500
-
-
-
-# default parameter for quality control
-# default minimum MAT region read quality
-Mqmin=25
-# default minimum Inserted region read quality
-Iqmin=25
-# default minimum insertion length
-Ilength=10
-
-# default parameter for first cuting-edge deduplication
-### the cut-off of upstream and downstream (default 30bp, 11+19bp)
-Cutsize=30
-CutstartF=33
-CutstartR=39
-
-# default parameter parameter for selfblast
-### 
-DepIden=95
-DepGapsize=6
-DepMismatch=6
-DepCov=0.95
-
-# default parmater for different donor identification
-# The maxmium microhomologous length between donors(default 20)
-MaxMicroHom=20
-# the overlapping region between donor, less than half of min donor size (0.5)
-OverProDonor=0.5
-
-
-
-#default parameter for second reference-based deduplication
-# The difference allowed between two reads, start site, end start site on the inserted reads (default: 6)
-IDonorGap=6
-# The difference allowed between two reads, start site, end start site on the chromosome locus of donor (default: 6)
-CDonorGap=6
-
-
-# default paramter for the estimated size of gap locus as single donor 3000
-EstGap=3000
 
 
 while getopts "a:b:c:d:p:f:r:gs;ga:n:ms:mc:mb:me:mq:iq:il:cs:cf:cr:di:do:dd:dm:dl:dc:dq:hm:ho:cg:ig" opt
@@ -155,6 +106,8 @@ genomeseq=${softpath}/iDSBins/Database/saccharomyces_cerevisiae_R64-2-1_20150113
 
 # default genome annotation
 genomeann=${softpath}/iDSBins/Database/saccharomyces_cerevisiae_R64-2-1_20150113_version6.bed
+
+# default GTF file
 
 # Print helpFunction in case parameters are empty
 if [ -z "${SampleID}" ] 
