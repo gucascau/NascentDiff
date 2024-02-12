@@ -66,7 +66,7 @@ To measure the normalized feature of each gene, we used one tail Poisson test to
 ```
 
 For more detail information, please feel free to contact: xin.wang@childrens.harvard.edu
-and Xinlei.Gao@childrens.harvard.edu
+and xinlei.gao@childrens.harvard.edu
 
 Copyright (c) 2022 Dr. Kaifu Chen lab
 
