@@ -57,14 +57,10 @@ bedGraphToBigWig Genome-wide.norm.cov mm10.rDNA.sizes Genome-wide.norm.bw
 
 ## Normalize the read counts of each features
 
-
-## Run the EdgR to detect the differential expressed nascent RNA, please run edgR for DEG without. The script is without any normalition
-
-EdgR.R
-
 ```
 
 For more detail information, please feel free to contact: xin.wang@childrens.harvard.edu
+and Xinlei.Gao@childrens.harvard.edu
 
 Copyright (c) 2022 Dr. Kaifu Chen lab
 
