@@ -13,6 +13,7 @@ NascentDiff is a pipeline to conduct a differential expression analysis in genom
 	 -- Measuring the global nascent RNA changes, including total nascent RNA, total rRNA, total protein coding and total long non-coding RNA.
 	 -- Detecting the differential expression of various features of nascent RNA, including the 18S, 28S rRNA, non-coding RNA, protein coding RNA
 	 -- Meta RNAs Profiling for normalized EU-seq reads.
+  	 -- Figure generations for the publication
    
 
 # Dependencies
