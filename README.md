@@ -38,6 +38,7 @@ Perl and shell are used to run the scripts. The following softwares are also req
 ```   
 # Usage
 ```
+## Part 1: The pipeline to measuer the read counts and genome-wide depth
 ## measure the read counts and genome-wide depth
 Usage: sh NascentCov.sh -a SampleID -f HighQuality Forward Read -r HighQuality Reverse Read -b WorkingDirectory -o OutputFolder -p SoftwareDirectory [Options]
 
@@ -54,8 +55,13 @@ perl NormalizationBasedOnERCC.pl -i Genome-wide.cov -a α -b β -c 1 -o Genome-w
 ### transfer into bigwig
 bedGraphToBigWig Genome-wide.norm.cov mm10.rDNA.sizes Genome-wide.norm.bw
 
+## Part 2: Normalize the read counts of each features normalized by ERCC.
+To measure the normalized feature of each gene, we used one tail Poisson test to evaluate difference in gene expression level based on the read counts normalized by total ERCC read counts. We defined differentially expressed RNAs as those with a fold change greater than 1.5 and an FDR value smaller than 0.05. To detect highly expressed genes, we ranked genes by RPKM in the control cells, whereas RPKM was calculated using ERCC-normalized read counts further normalized by gene length.
 
-## Normalize the read counts of each features
+~/src/DE_Poisson_v2.R
+
+## Part 3: Scripts for the figures from nasent EU RNA-seq
+~/src/regenerate_figures.R
 
 ```
 
