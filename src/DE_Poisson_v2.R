@@ -1,3 +1,7 @@
+# Author: xinlei.gao@Childrens.harvard.edu & xin.wang@childrens.harvard.edu
+# Description: We applied different methods to normalize the raw read counts
+
+
 # normalized to mean of raw read counts
 head(total_readCount)
 colSums(total_readCount[,2:5])
