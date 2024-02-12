@@ -60,7 +60,7 @@ To measure the normalized feature of each gene, we used one tail Poisson test to
 
 ~/src/DE_Poisson_v2.R
 
-## Part 3: Scripts for the figures from nasent EU RNA-seq
+## Part 3: Scripts for the figures from nasent EU RNA-seq analyses, including heatmaps and GO enrichment.
 ~/src/regenerate_figures.R
 
 ```
