@@ -66,6 +66,8 @@ Figure 3B-3F and 4A
 ~/src/regenerate_figure3B-3F_4A.R
 Figure 4B-4F
 ~/src/regenerate_figure4B-F.R
+Supplementary Figure 7
+~/src/PoissonTestForSamplesFromCRISPR.R
 
 ```
 
