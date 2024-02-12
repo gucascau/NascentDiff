@@ -1,5 +1,7 @@
 # Author: xinlei.gao@Childrens.harvard.edu & xin.wang@childrens.harvard.edu
-# Description: We applied different methods to normalize the raw read counts
+# Description: We applied different methods to normalize the raw read counts.
+# Final Method: We used one tail Poisson test to evaluate difference in gene expression level based on the read counts normalized by total ERCC read counts. 
+# We defined differentially expressed RNAs as those with a fold change greater than 1.5 and an FDR value smaller than 0.05. 
 
 
 # normalized to mean of raw read counts
