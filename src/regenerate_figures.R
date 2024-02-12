@@ -1,7 +1,7 @@
-# Author: Xinlei.Gao@childrens.harvard.edu
-# Description: regenerate Figure 6 and 7
+# Author: xinlei.gao@childrens.harvard.edu
+# Description: regenerate Figure 3B, 3C, 3D, 3E and 4A
 
-# Fig. 6B
+# Fig. 3B
 # barplot
 cpm <- read.csv("read_count_normalized_by_ERCC_total.csv", row.names = 1)
 
@@ -59,7 +59,7 @@ t.test(log2(e[1:2]), log2(e[3:4]), alternative = "greater")$p.value
 t.test(log2(e1[1:2]), log2(e1[3:4]), alternative = "greater")$p.value
 t.test(log2(e2[1:2]), log2(e2[3:4]), alternative = "less")$p.value
 
-# Figure 6C
+# Figure 3B
 
 cpm.rRNA.sep <- cpm[grep("ribosomal", cpm$Gene), ]
 cpm.rRNA.sep <- cpm.rRNA.sep[c(2,1,3), ]
@@ -82,7 +82,7 @@ emat <- as.matrix(cbind(e.mean, e1.mean, e2.mean))
 mat.sd <- cbind(e.sd, e1.sd, e2.sd)
 
 
-pdf("Figures/Figure6C.pdf", height = 4, width = 6)
+pdf("Figures/Figure3B.pdf", height = 4, width = 6)
 par(mar=c(2,5,1,2))
 bp <- barplot(mat, axes = F, beside = T, ylim = c(0,40), names.arg = rep("",3), 
               legend.text = FALSE, space = c(0.2, 0.8), col = c("blue", "red"))
@@ -116,12 +116,12 @@ t.test(log2(e1[1:2]), log2(e1[3:4]), alternative = "greater")$p.value
 t.test(log2(e2[1:2]), log2(e2[3:4]), alternative = "greater")$p.value
 
 
-# Figure 6E
+# Figure 3C
 
 # protein coding
 cpm.mean.pro <- cpm.mean[rownames(cpm.mean) %in% protein_coding_genes, ]
 
-pdf("Figures/Figure6D.pdf")
+pdf("Figures/Figure3C.pdf")
 plot(cpm.mean.pro[, "log2FC"], -log10(as.numeric(cpm.mean.pro[, "adj.P"])), col = cpm.mean.pro[, "color"], 
      pch = 19, cex = 0.3, ylim = c(0,20), xlim = c(-8, 8))
 dev.off()
@@ -129,19 +129,19 @@ length(which(cpm.mean.pro[, "color"] == "red"))
 length(which(cpm.mean.pro[, "color"] == "blue"))
 
 
-# Figure 6F
+# Figure 3D
 library(pheatmap)
 cols = colorRampPalette(c("blue","white","red"))(50)
 DEG_table <- rbind(exp_table[exp_table$ENS %in% up_protein$ENS, c("noIR1","IR1","noIR2","IR2")],
                    exp_table[exp_table$ENS %in% down_protein$ENS, c("noIR1","IR1","noIR2","IR2")])
 #rm <- which(rowSums(DEG_table) == 0)
-pdf("Figures/Figure6F.pdf")
+pdf("Figures/Figure3D.pdf")
 pheatmap(as.matrix(log2(DEG_table + 0.001)), scale = "row",  color = cols,
          fontsize_col=15, cluster_rows=FALSE, cluster_cols = FALSE,treeheight_row = 0, treeheight_col = 0,
          show_rownames = F, show_colnames = T)
 dev.off()
 
-# Figure 6G
+# Figure 3E
 
 # read in detailed table from Xin
 exp_table <- read.table("read_count_normalized_by_ERCC_total_poisson_test_detailed.txt", header = T, sep = "\t")
@@ -166,7 +166,7 @@ down_protein_BP <- enrichGO(gene = down_protein$ENS, OrgDb = "org.Mm.eg.db", pva
 down_protein_BP_sim <- setReadable(down_protein_BP_sim, OrgDb = "org.Mm.eg.db")
 write.csv(data.frame(down_protein_BP_sim), file = "down_regulated_protein_GOBP_enrichment.csv")
 
-# Figure 7A
+# Figure 4A
 library(xlsx)
 normReadCount <- read.xlsx("NormalizedReadCounts_Figure7A_Xin.xlsx", sheetIndex = 1)
 
