@@ -72,6 +72,8 @@ To measure the normalized feature of each gene, we used one tail Poisson test to
 ~/src/PoissonTestForSamplesFromCRISPR.R
 
 ```
+# Reference
+Zulong ChenXin WangXinlei GaoNina ArslanovicKaifu ChenJessica Tyler2024Transcriptional inhibition after irradiation occurs preferentially at highly expressed genes in a manner dependent on cell cycle progressioneLife13:RP94001
 
 For more detail information, please feel free to contact: xin.wang@childrens.harvard.edu
 and xinlei.gao@childrens.harvard.edu
