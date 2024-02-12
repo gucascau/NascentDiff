@@ -75,7 +75,7 @@ To measure the normalized feature of each gene, we used one tail Poisson test to
 
 ```
 # Reference
-Zulong Chen, Xin Wang, Xinlei Gao,Nina Arslanovic, Kaifu Chen, Jessica Tyler 2024, Transcriptional inhibition after irradiation occurs preferentially at highly expressed genes in a manner dependent on cell cycle progression eLife 13:RP94001
+Zulong Chen^, Xin Wang^, Xinlei Gao,Nina Arslanovic, Kaifu Chen^, Jessica Tyler^ 2024, _Transcriptional inhibition after irradiation occurs preferentially at highly expressed genes in a manner dependent on cell cycle progression_ **eLife** 13:RP94001
 
 # Contact and Copyright
 For more detail information, please feel free to contact: xin.wang@childrens.harvard.edu
